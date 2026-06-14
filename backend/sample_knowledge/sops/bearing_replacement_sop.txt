@@ -1,0 +1,158 @@
+STANDARD OPERATING PROCEDURE: BEARING REPLACEMENT
+===================================================
+Document ID: SOP-MECH-001
+Revision: 3.0
+Effective Date: January 2026
+Department: Mechanical Maintenance
+
+1. PURPOSE
+----------
+This SOP defines the step-by-step procedure for replacing rolling element bearings on continuous caster segment rollers, rolling mill backup rolls, and other critical rotating equipment.
+
+2. SCOPE
+--------
+Applies to all SKF, FAG, and NSK spherical roller bearings (series 22000, 23000, 24000) installed on:
+- Continuous caster segment rollers (CCM-001)
+- Rolling mill backup roll assemblies (HRM-001, CRM-001)
+- Crane hoist mechanisms (CR-001)
+
+3. SAFETY REQUIREMENTS
+-----------------------
+- Lock Out / Tag Out (LOTO) must be applied before any work
+- Minimum 2 personnel required for bearing replacement
+- Personal Protective Equipment: Safety helmet, steel-toe boots, heat-resistant gloves, safety glasses
+- Ensure equipment is fully de-energized and cooled below 50°C
+- Obtain work permit from shift supervisor
+- Verify crane availability for heavy component handling
+
+4. TOOLS AND MATERIALS REQUIRED
+--------------------------------
+- Hydraulic bearing puller set (up to 500mm bore)
+- Induction bearing heater (up to 200°C)
+- Torque wrench (range: 200-1500 Nm)
+- Dial indicator with magnetic base
+- Feeler gauge set (0.02-1.00 mm)
+- Bearing grease: SKF LGMT 3 or equivalent
+- Cleaning solvent (non-chlorinated)
+- Lint-free wipes
+- New bearings (verified part number and dimensions)
+- New seals and O-rings
+- Lifting slings and shackles (rated for component weight)
+
+5. PRE-REPLACEMENT CHECKS
+---------------------------
+Step 1: Verify bearing failure diagnosis
+  - Review vibration analysis report
+  - Check temperature trend data
+  - Confirm bearing identification (part number, position)
+  
+Step 2: Prepare replacement bearing
+  - Inspect new bearing for shipping damage
+  - Verify part number matches specification
+  - Check bearing clearance (C3 or C4 as specified)
+  - Store in clean, dry location until installation
+
+Step 3: Plan the work
+  - Estimate downtime (typical: 4-6 hours per bearing)
+  - Arrange crane and rigging
+  - Notify production planning of outage window
+  - Prepare tools and workspace
+
+6. REMOVAL PROCEDURE
+---------------------
+Step 1: Isolate and secure equipment
+  - Apply LOTO on all energy sources
+  - Drain lubricant/coolant from bearing housing
+  - Allow cooling to below 50°C
+
+Step 2: Remove housing and covers
+  - Unbolt bearing housing cap bolts in star pattern
+  - Lift housing cover using crane if heavy
+  - Clean exposed bearing area
+
+Step 3: Remove old bearing
+  - Use hydraulic bearing puller
+  - Apply even force to avoid shaft damage
+  - NEVER use hammers or impact tools on precision surfaces
+  - Inspect shaft surface after bearing removal
+  - Document any shaft damage (pitting, scoring, wear)
+
+Step 4: Inspect shaft and housing
+  - Measure shaft diameter at bearing seat (3 positions)
+  - Measure housing bore diameter (3 positions)
+  - Compare with specification tolerances
+  - Check for fretting corrosion, scoring, or wear
+  - If out of tolerance: Report to engineering for disposition
+
+7. INSTALLATION PROCEDURE
+---------------------------
+Step 1: Clean all surfaces
+  - Clean shaft bearing seat with solvent
+  - Clean housing bore
+  - Remove all old grease and debris
+  - Dry completely with lint-free wipes
+
+Step 2: Heat new bearing
+  - Use induction heater to heat bearing to 80-100°C above ambient
+  - NEVER exceed 125°C (risk of bearing damage)
+  - Handle with heat-resistant gloves
+  - Work quickly — bearing contracts as it cools
+
+Step 3: Mount bearing on shaft
+  - Slide heated bearing onto shaft smoothly
+  - Push firmly against shaft shoulder
+  - Hold in position until bearing cools and grips shaft
+  - Verify bearing is fully seated against shoulder
+
+Step 4: Install seals
+  - Install new seals with correct orientation (lip facing lubricant side)
+  - Ensure seals are not damaged during installation
+  - Apply thin layer of grease to seal lip
+
+Step 5: Reassemble housing
+  - Lower shaft assembly into housing
+  - Install housing cap
+  - Tighten bolts in star pattern to specified torque
+  - Verify shaft rotates freely by hand
+
+Step 6: Lubricate
+  - Fill bearing housing with specified grease quantity (typically 30-50% of free space)
+  - DO NOT over-grease (causes overheating)
+  - Connect grease lines if applicable
+  - Verify grease reaches bearing through inspection port
+
+8. POST-INSTALLATION VERIFICATION
+------------------------------------
+Step 1: Alignment check
+  - Use dial indicator to check shaft runout (<0.05 mm)
+  - Verify axial float is within specification
+  - Check coupling alignment if applicable
+
+Step 2: Trial run
+  - Remove LOTO
+  - Start equipment at LOW speed for first 30 minutes
+  - Monitor bearing temperature (should not exceed ambient + 40°C)
+  - Listen for abnormal noise
+  - Check vibration levels (should be below 2.0 mm/s)
+
+Step 3: Documentation
+  - Record bearing part number, manufacturer, batch
+  - Record installation date and personnel
+  - Record initial vibration and temperature readings
+  - Update equipment maintenance log
+  - Update bearing life tracking database
+
+9. FAILURE ANALYSIS OF REMOVED BEARING
+-----------------------------------------
+Always perform failure analysis on removed bearings:
+- Photograph the bearing before cleaning
+- Identify failure mode: fatigue spalling, contamination, lubrication failure, overload, corrosion
+- Record findings in failure analysis report
+- Use findings to prevent recurrence (root cause correction)
+
+10. ESTIMATED DURATION AND RESOURCES
+--------------------------------------
+- Standard bearing replacement: 4-6 hours
+- Complex replacement (caster segment): 6-10 hours
+- Personnel: 2 mechanics + 1 crane operator
+- Typical cost: Parts + 8 man-hours labor

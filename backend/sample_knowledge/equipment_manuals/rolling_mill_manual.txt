@@ -1,0 +1,122 @@
+HOT ROLLING MILL — EQUIPMENT MANUAL
+====================================
+Model: Continuous Hot Strip Mill — 6-Stand Finishing
+Manufacturer: SMS Group
+Installation Date: May 2016
+Location: Rolling Zone, Steel Plant
+
+1. EQUIPMENT OVERVIEW
+---------------------
+The Hot Rolling Mill (HRM) is a continuous hot strip mill consisting of a roughing section, crop shear, 6-stand finishing mill, laminar cooling system, and downcoilers. It processes reheated slabs into hot-rolled coils with thickness ranging from 1.2 mm to 16 mm.
+
+2. OPERATING PARAMETERS
+-----------------------
+- Slab entry temperature: 1050-1100°C
+- Finishing temperature: 830-900°C
+- Coiling temperature: 550-700°C (grade dependent)
+- Maximum strip width: 1850 mm
+- Maximum rolling speed: 20 m/s
+- Annual capacity: 4 million tonnes
+
+3. CRITICAL COMPONENTS AND FAILURE MODES
+-----------------------------------------
+
+3.1 Work Rolls (Finishing Stands F1-F6)
+- Function: Direct contact with strip for thickness reduction
+- Common failures: Surface spalling, thermal cracking, bearing failure
+- Warning signs: Strip surface defects, increased roll force, vibration increase, bearing temperature rise
+- Roll change frequency: Every 100-150 km of rolled strip
+- Recommended: Monitor roll force trends, surface inspection after each campaign
+
+3.2 Backup Rolls
+- Function: Support work rolls and maintain flatness
+- Common failures: Spalling, peeling, bearing damage
+- Warning signs: Strip flatness deterioration, unusual vibration patterns
+- Campaign length: 15,000-20,000 tonnes of strip
+- Critical: Inspect bearing seats during every change
+
+3.3 Hydraulic AGC (Automatic Gauge Control)
+- Function: Controls strip thickness with hydraulic cylinders
+- Common failures: Servo valve malfunction, cylinder seal leak, position sensor drift
+- Warning signs: Thickness variation beyond tolerance (±0.02 mm), hydraulic pressure fluctuation
+- Recommended inspection: Monthly calibration, quarterly servo valve testing
+
+3.4 Motor and Drive System
+- Function: Provides rolling force via electric motors and gear spindles
+- Common failures: Motor winding insulation failure, gear tooth wear, spindle coupling failure
+- Warning signs: Motor current spikes (>500A sustained), abnormal noise, gear oil analysis showing metal particles
+- Recommended: Online motor current monitoring, quarterly oil analysis, annual thermography
+
+3.5 Laminar Cooling System
+- Function: Controlled cooling of strip between finishing mill and coiler
+- Common failures: Nozzle blockage, header valve failure, flow distribution imbalance
+- Warning signs: Inconsistent strip temperature, coiling temperature deviation, strip flatness issues
+- Recommended: Weekly nozzle flow check, monthly header inspection
+
+4. VIBRATION ANALYSIS GUIDELINES
+---------------------------------
+- Normal: 0.5-3.5 mm/s RMS on bearing housing
+- Pre-warning: 4.5 mm/s
+- Warning: 6.0 mm/s
+- Critical: 8.5 mm/s (schedule immediate inspection)
+- Alarm: 12.0 mm/s (automatic mill stop)
+
+Key vibration frequencies to monitor:
+- 1x RPM: Imbalance or misalignment
+- 2x RPM: Looseness or misalignment
+- BPFO/BPFI: Bearing defect frequencies
+- Gear mesh frequency: Gear tooth damage
+
+5. LUBRICATION REQUIREMENTS
+----------------------------
+- Work roll bearings: Grease lubrication, automatic system
+- Backup roll bearings: Oil film bearing, circulation system
+- Gearboxes: EP gear oil, ISO VG 320
+- Oil analysis interval: Monthly
+- Grease replenishment: Daily (automated)
+
+6. MAINTENANCE SCHEDULE
+-----------------------
+Every roll change: Work roll bearing inspection, strip guide alignment
+Weekly: Hydraulic system pressure check, cooling nozzle flow test
+Monthly: AGC calibration, motor temperature trend review, oil analysis
+Quarterly: Servo valve testing, gear spindle inspection
+Semi-annual: Drive motor inspection, gear reducer inspection
+Annual: Complete mill alignment survey, backup roll bearing replacement
+
+7. TROUBLESHOOTING GUIDE
+--------------------------
+
+Problem: Strip thickness variation
+→ Check AGC hydraulic pressure
+→ Verify position sensor calibration
+→ Inspect servo valves for sticking
+→ Check work roll profile (thermal crown)
+
+Problem: Excessive vibration on finishing stand
+→ Check roll balance and roundness
+→ Inspect bearings (vibration signature analysis)
+→ Verify spindle coupling alignment
+→ Check for strip cobble damage
+
+Problem: Motor current exceeding limits
+→ Check for excessive reduction schedule
+→ Verify lubricant flow to roll bite
+→ Inspect motor cooling system
+→ Check drive alignment
+
+Problem: Strip surface defects (scale marks)
+→ Check descaler spray pressure and pattern
+→ Verify water quality (no nozzle blockage)
+→ Inspect roll surface condition
+→ Check slab heating uniformity
+
+8. SPARE PARTS — CRITICAL INVENTORY
+------------------------------------
+- Work rolls: 2 sets per stand
+- Backup rolls: 1 spare set per stand
+- AGC servo valves: 2 per stand
+- Hydraulic cylinder seals: Complete kit per stand
+- Motor bearings: 1 set per motor
+- Spindle couplings: 1 spare per stand
+- Cooling nozzles: 10% spare inventory

@@ -1,0 +1,107 @@
+BLAST FURNACE #1 — EQUIPMENT MANUAL
+=====================================
+Model: BF-5000 Series
+Manufacturer: Danieli Corus
+Installation Date: March 2015
+Location: Ironmaking Zone, Steel Plant
+
+1. EQUIPMENT OVERVIEW
+---------------------
+The Blast Furnace #1 is the primary ironmaking unit with a working volume of 2500 m³ and a daily capacity of 5000 tonnes of hot metal. The furnace operates continuously, converting iron ore, coke, and fluxes into liquid pig iron (hot metal) and slag.
+
+2. OPERATING PARAMETERS
+-----------------------
+- Hot blast temperature: 1150-1250°C (normal operating range)
+- Top gas pressure: 2.0-2.8 bar
+- Hearth temperature: 1450-1520°C
+- Tuyere wind velocity: 200-240 m/s
+- Coke rate: 350-400 kg/tonne hot metal
+- Slag basicity (CaO/SiO2): 1.0-1.2
+- Hot metal silicon: 0.3-0.6%
+- Hot metal temperature: 1480-1520°C
+
+3. CRITICAL COMPONENTS AND FAILURE MODES
+-----------------------------------------
+
+3.1 Tuyere Assembly
+- Function: Injects preheated air (hot blast) into the furnace
+- Common failures: Burn-through due to cooling water failure, erosion from burden contact
+- Warning signs: Increased cooling water temperature, water flow decrease, visual burn marks
+- Recommended inspection: Every 2 weeks visual, every 3 months detailed
+- Typical life: 12-18 months depending on operating conditions
+
+3.2 Cooling System (Stave Coolers)
+- Function: Maintains furnace shell temperature within safe limits
+- Common failures: Water leak from cracked staves, blocked cooling channels
+- Warning signs: Hot spots on shell (detected by thermocouples), water quality deterioration
+- Recommended inspection: Continuous monitoring via embedded thermocouples
+- Critical action: If shell temperature exceeds 350°C, reduce production rate
+
+3.3 Burden Distribution System (Bell-less Top / Paul Wurth)
+- Function: Controls the distribution of raw materials in the furnace
+- Common failures: Chute actuator failure, distribution plate wear, gear mechanism jamming
+- Warning signs: Uneven gas distribution (detected by top gas temperature probes), abnormal chute position signals
+- Recommended inspection: Monthly mechanical inspection, daily position calibration check
+
+3.4 Tap Hole Assembly
+- Function: Opening for draining hot metal and slag
+- Common failures: Tap hole drill failure, mud gun malfunction, taphole clay issues
+- Warning signs: Difficulty in opening/closing, irregular tapping time, hot metal breakthrough risk
+- Recommended inspection: After every cast (4-6 times per day)
+
+3.5 Hot Blast Stoves
+- Function: Preheats combustion air to 1200°C before injection
+- Common failures: Refractory failure, dome cracking, checker brick collapse
+- Warning signs: Decreased blast temperature, increased fuel consumption, temperature imbalance between stoves
+- Recommended inspection: Annual internal inspection during planned shutdown
+
+4. VIBRATION ANALYSIS GUIDELINES
+---------------------------------
+- Normal operating vibration: 0.5-3.0 mm/s RMS
+- Warning threshold: 5.0 mm/s RMS
+- Critical threshold: 7.0 mm/s RMS
+- Alarm threshold: 10.0 mm/s RMS (automatic trip)
+
+Vibration sources to investigate:
+- Uneven burden distribution causing gas channeling
+- Cooling system pump issues
+- Hot blast valve malfunction
+- Structural resonance in the furnace body
+
+5. MAINTENANCE SCHEDULE
+-----------------------
+Daily: Visual inspection of tuyeres, tap holes, cooling water system
+Weekly: Burden distribution system calibration, gas analysis
+Monthly: Detailed mechanical inspection of top equipment, cooling system assessment
+Quarterly: Hot blast stove inspection, refractory survey
+Annual: Complete furnace survey during planned shutdown (7-14 days)
+
+6. EMERGENCY PROCEDURES
+------------------------
+6.1 Cooling Water Failure
+- IMMEDIATE: Reduce blast volume by 50%
+- Within 5 min: Activate emergency cooling loop
+- Within 15 min: If not restored, begin controlled banking of furnace
+- DO NOT: Shut off blast completely without banking procedure
+
+6.2 Tuyere Burn-Through
+- IMMEDIATE: Isolate affected tuyere cooling circuit
+- Plug the tuyere from outside
+- Continue operation on remaining tuyeres if possible
+- Schedule replacement during next planned maintenance window
+
+6.3 Tap Hole Breakthrough
+- IMMEDIATE: Sound emergency alarm, evacuate cast house floor
+- Activate emergency slag runner water spray
+- Attempt to close with mud gun
+- Contact emergency response team
+
+7. SPARE PARTS — CRITICAL INVENTORY
+------------------------------------
+- Tuyere noses: Minimum 6 in stock
+- Stave cooler segments: Minimum 2 per zone
+- Tap hole drill bits: Minimum 4
+- Mud gun nozzles: Minimum 3
+- Burden distribution chute actuator motor: 1 spare
+- Hot blast valve: 1 complete spare assembly
+- Cooling water pump: 1 standby pump per circuit

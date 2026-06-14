@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Intelligent Maintenance Wizard — AI-powered decision support system for Tata Steel industrial plant equipment maintenance, featuring multi-agent diagnostics, risk assessment, OEE analytics, cost impact analysis, and predictive maintenance.">
+    <title>Intelligent Maintenance Wizard — Tata Steel AI</title>
+    <link rel="stylesheet" href="/css/styles.css?v=27">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏭</text></svg>">
+</head>
+
+<body>
+
+
+    <div class="app-container">
+        <!-- ═══ Sidebar ═══ -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="sidebar-logo-icon">🏭</div>
+                    <div class="sidebar-logo-text">
+                        <div class="sidebar-logo-title">Maintenance Wizard</div>
+                        <div class="sidebar-logo-subtitle">Agentic AI System</div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">Overview</div>
+                <div class="nav-item active" data-view="dashboard" id="nav-dashboard">
+                    <span class="nav-item-icon">📊</span>
+                    <span>Dashboard</span>
+                </div>
+
+                <div class="nav-section-label">AI Agents</div>
+                <div class="nav-item" data-view="chat" id="nav-chat">
+                    <span class="nav-item-icon">💬</span>
+                    <span>AI Chat</span>
+                </div>
+
+                <div class="nav-section-label">Monitoring</div>
+                <div class="nav-item" data-view="alerts" id="nav-alerts">
+                    <span class="nav-item-icon">🚨</span>
+                    <span>Alerts</span>
+                    <span class="nav-item-badge" id="alert-count-badge" style="display:none">0</span>
+                </div>
+
+                <div class="nav-item" data-view="logbook" id="nav-logbook">
+                    <span class="nav-item-icon">📖</span>
+                    <span>Digital Logbook</span>
+                </div>
+
+                <div class="nav-section-label">Analytics</div>
+                <div class="nav-item" data-view="analytics" id="nav-analytics">
+                    <span class="nav-item-icon">📈</span>
+                    <span>OEE & Analytics</span>
+                </div>
+
+                <div class="nav-section-label">Knowledge</div>
+                <div class="nav-item" data-view="knowledge" id="nav-knowledge">
+                    <span class="nav-item-icon">📚</span>
+                    <span>Knowledge Base</span>
+                </div>
+
+                <div class="nav-section-label" id="notifications-label" style="display: none;">Live Notifications</div>
+                <div class="toast-container" id="toast-container"></div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="connection-status">
+                    <span class="connection-dot" id="ws-status-dot"></span>
+                    <span id="ws-status-text">Connecting...</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ═══ Main Content ═══ -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-title">
+                    <h1 id="view-title">Plant Dashboard</h1>
+                    <span class="subtitle" id="view-subtitle">Real-time equipment monitoring</span>
+                </div>
+                <div class="header-actions">
+                    <div class="role-selector" style="margin-right: 15px;">
+                        <select id="user-role-select" onchange="changeUserRole()"
+                            style="background: var(--bg-input); color: var(--text-primary); border: 1px solid var(--border-default); border-radius: var(--radius-sm); padding: 6px 12px; outline: none; font-family: var(--font-sans); cursor: pointer;">
+                            <option value="engineer">🛠️ Field Engineer</option>
+                            <option value="supervisor">📋 Shift Supervisor</option>
+                            <option value="manager">👔 Plant Manager</option>
+                        </select>
+                    </div>
+                    <div class="header-badge ai-status" id="ai-status-badge">
+                        <span>🤖</span>
+                        <span id="ai-status-text">AI Active</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ═══ Dashboard View ═══ -->
+            <div class="content-area">
+                <div class="view active" id="view-dashboard">
+                    <div class="stats-grid" id="stats-grid">
+                        <!-- Stats cards populated by JS -->
+                    </div>
+
+                    <!-- ═══ Scenario Mode ═══ -->
+                    <div class="scenario-panel" id="scenario-panel">
+                        <div class="section-header">
+                            <h2 class="section-title">🎯 Demo Scenarios — Proactive Failure Detection</h2>
+                            <button class="scenario-reset-btn" onclick="resetScenarios()">🔄 Reset All</button>
+                        </div>
+                        <div class="scenario-grid" id="scenario-grid">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="section-header">
+                        <h2 class="section-title">Plant Digital Twin</h2>
+                    </div>
+                    <div class="digital-twin-container" id="digital-twin-container">
+                        <!-- Digital Twin visualization populated by JS -->
+                    </div>
+                    <div class="section-header" style="margin-top: 30px;">
+                        <h2 class="section-title">Equipment Fleet Details</h2>
+                    </div>
+                    <div class="equipment-grid" id="equipment-grid">
+                        <!-- Equipment cards populated by JS -->
+                    </div>
+                    <div id="role-specific-section">
+                        <!-- Role-specific content populated by JS -->
+                    </div>
+                </div>
+
+                <!-- ═══ Chat View ═══ -->
+                <div class="view" id="view-chat">
+                    <div class="chat-layout">
+                        <!-- Main Chat Area -->
+                        <div class="chat-container">
+                            <div class="chat-messages" id="chat-messages">
+                                <div class="chat-welcome" id="chat-welcome">
+                                    <span class="chat-welcome-icon">🤖</span>
+                                    <h2>Intelligent Maintenance Wizard</h2>
+                                    <p>I'm your AI-powered maintenance assistant for Tata Steel. Ask me about equipment
+                                        diagnostics, risk assessment, cost impact, maintenance procedures, or generate
+                                        reports.</p>
+                                    <div class="quick-actions">
+                                        <button class="quick-action"
+                                            onclick="sendQuickMessage('What is the current status of all equipment?')">📊
+                                            Equipment Status</button>
+                                        <button class="quick-action"
+                                            onclick="sendQuickMessage('What are the active alerts and their severity?')">🚨
+                                            Active Alerts</button>
+                                        <button class="quick-action"
+                                            onclick="sendQuickMessage('The blast furnace is showing unusual vibration. What could be wrong?')">🔍
+                                            Diagnose Issue</button>
+                                        <button class="quick-action"
+                                            onclick="sendQuickMessage('What is the risk level for the continuous caster bearing?')">🚦
+                                            Risk Assessment</button>
+                                        <button class="quick-action"
+                                            onclick="sendQuickMessage('What is the cost impact of the caster bearing failure? Calculate downtime cost and ROI')">💰
+                                            Cost Impact</button>
+                                        <button class="quick-action"
+                                            onclick="sendQuickMessage('How do I replace a bearing on the caster segment roller?')">🔧
+                                            Maintenance Guide</button>
+                                        <button class="quick-action"
+                                            onclick="sendQuickMessage('Generate a maintenance status report for the plant')">📋
+                                            Generate Report</button>
+                                    </div>
+                                </div>
+
+                                <div class="typing-indicator" id="typing-indicator">
+                                    <div class="message-avatar"
+                                        style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));">
+                                        🤖</div>
+                                    <div class="typing-thinking-wrap">
+                                        <div class="typing-dots">
+                                            <div class="typing-dot"></div>
+                                            <div class="typing-dot"></div>
+                                            <div class="typing-dot"></div>
+                                        </div>
+                                        <div class="agent-thinking-status" id="agent-thinking-status"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-input-area">
+                                <div class="voice-wave-container" id="voice-wave-container" style="display: none;">
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <span class="wave-text">Listening to your voice...</span>
+                                </div>
+                                <div class="chat-input-wrapper">
+                                    <button class="chat-image-btn" id="chat-image-btn" title="Upload Image" onclick="document.getElementById('chat-image-upload').click()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                    </button>
+                                    <button class="chat-tts-stop-btn" id="chat-tts-stop-btn" title="Pause Audio" style="display: none;">
+                                        <svg id="tts-icon-pause" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <svg id="tts-icon-play" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display: none;">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </button>
+                                    <input type="file" id="chat-image-upload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+                                    <textarea class="chat-input" id="chat-input"
+                                        placeholder="Ask about equipment diagnostics, maintenance, risks..." rows="1"
+                                        onkeydown="handleChatKeydown(event)"></textarea>
+                                    <button class="chat-voice-btn" id="chat-voice-btn" title="Voice Input" onclick="toggleVoiceMode()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                                        </svg>
+                                    </button>
+                                    <button class="chat-send-btn" id="chat-send-btn" onclick="sendMessage()">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div id="chat-image-preview" style="display: none; padding: 10px; position: relative;">
+                                    <img id="chat-preview-img" src="" style="max-height: 100px; border-radius: var(--radius-sm); border: 1px solid var(--border-default);">
+                                    <button onclick="removeImagePreview()" style="position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 24px; height: 24px; cursor: pointer;">×</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ Alerts View ═══ -->
+                <div class="view" id="view-alerts">
+                    <div class="alerts-toolbar">
+                        <button class="filter-btn active" data-filter="all"
+                            onclick="filterAlerts('all', this)">All</button>
+                        <button class="filter-btn" data-filter="critical" onclick="filterAlerts('critical', this)">🔴
+                            Critical</button>
+                        <button class="filter-btn" data-filter="high" onclick="filterAlerts('high', this)">🟠
+                            High</button>
+                        <button class="filter-btn" data-filter="medium" onclick="filterAlerts('medium', this)">🟡
+                            Medium</button>
+                        <button class="filter-btn" data-filter="low" onclick="filterAlerts('low', this)">🟢 Low</button>
+                    </div>
+                    <div class="alerts-list" id="alerts-list">
+                        <!-- Alert cards populated by JS -->
+                    </div>
+                </div>
+
+                <!-- ═══ Logbook View ═══ -->
+                <div class="view" id="view-logbook">
+                    <div class="section-header">
+                        <h2 class="section-title">Maintenance Digital Logbook</h2>
+                    </div>
+                    <div class="logbook-list" id="logbook-list"
+                        style="display: flex; flex-direction: column; gap: 16px;">
+                        <!-- Logbook entries populated by JS -->
+                        <div class="chat-welcome" style="padding: 40px 20px;">
+                            <span class="chat-welcome-icon">📖</span>
+                            <h2>Loading Logbook...</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ Analytics View ═══ -->
+                <div class="view" id="view-analytics">
+                    <!-- Export Button -->
+                    <div style="display: flex; justify-content: flex-end; margin-bottom: 12px;">
+                        <button onclick="exportAnalyticsReport()"
+                            style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); color: white; border: none; padding: 8px 16px; border-radius: var(--radius-sm); font-family: var(--font-sans); font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: var(--shadow-glow);">
+                            📄 Export PDF Report
+                        </button>
+                    </div>
+                    <!-- OEE Summary Cards -->
+                    <div class="analytics-oee-grid" id="analytics-oee-grid">
+                        <!-- OEE cards populated by JS -->
+                    </div>
+
+                    <!-- OEE Gauges Row -->
+                    <div class="analytics-gauges-row" id="analytics-gauges-row">
+                        <div class="analytics-gauge-card">
+                            <h3 class="analytics-gauge-title">Plant Availability</h3>
+                            <div class="analytics-gauge-container">
+                                <canvas id="chart-availability" width="200" height="200"></canvas>
+                            </div>
+                            <div class="analytics-gauge-value" id="gauge-availability">--</div>
+                        </div>
+                        <div class="analytics-gauge-card">
+                            <h3 class="analytics-gauge-title">Plant Performance</h3>
+                            <div class="analytics-gauge-container">
+                                <canvas id="chart-performance" width="200" height="200"></canvas>
+                            </div>
+                            <div class="analytics-gauge-value" id="gauge-performance">--</div>
+                        </div>
+                        <div class="analytics-gauge-card">
+                            <h3 class="analytics-gauge-title">Plant Quality</h3>
+                            <div class="analytics-gauge-container">
+                                <canvas id="chart-quality" width="200" height="200"></canvas>
+                            </div>
+                            <div class="analytics-gauge-value" id="gauge-quality">--</div>
+                        </div>
+                        <div class="analytics-gauge-card">
+                            <h3 class="analytics-gauge-title">Overall OEE</h3>
+                            <div class="analytics-gauge-container">
+                                <canvas id="chart-oee" width="200" height="200"></canvas>
+                            </div>
+                            <div class="analytics-gauge-value" id="gauge-oee">--</div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="analytics-charts-row">
+                        <div class="analytics-chart-card">
+                            <h3 class="analytics-chart-title">Equipment OEE Comparison</h3>
+                            <div class="analytics-chart-container">
+                                <canvas id="chart-equipment-oee"></canvas>
+                            </div>
+                        </div>
+                        <div class="analytics-chart-card">
+                            <h3 class="analytics-chart-title">Cost Impact Summary (₹ Lakhs)</h3>
+                            <div class="analytics-chart-container">
+                                <canvas id="chart-cost-impact"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Predictive Timeline -->
+                    <div class="analytics-section-header">
+                        <h2 class="section-title">🔮 Predictive Maintenance Timeline</h2>
+                    </div>
+                    <div class="analytics-timeline" id="analytics-timeline">
+                        <!-- Timeline items populated by JS -->
+                    </div>
+
+                    <!-- ML Anomaly Detection -->
+                    <div class="analytics-section-header">
+                        <h2 class="section-title">🧠 ML Anomaly Detection</h2>
+                        <span class="ml-engine-badge" id="ml-engine-badge">IsolationForest + Robust-Z/EWMA</span>
+                    </div>
+                    <div class="anomaly-grid" id="anomaly-grid">
+                        <!-- ML anomaly cards populated by JS -->
+                    </div>
+
+                    <!-- Sensor Trends -->
+                    <div class="analytics-section-header">
+                        <h2 class="section-title">📉 Sensor Trend Analysis</h2>
+                        <select id="analytics-equipment-select" onchange="loadSensorTrends()"
+                            style="background: var(--bg-input); color: var(--text-primary); border: 1px solid var(--border-default); border-radius: var(--radius-sm); padding: 6px 12px; outline: none; font-family: var(--font-sans); cursor: pointer; margin-left: 12px;">
+                            <option value="">Select Equipment...</option>
+                        </select>
+                    </div>
+                    <div class="analytics-trends-grid" id="analytics-trends-grid">
+                        <!-- Trend charts populated by JS -->
+                    </div>
+                </div>
+
+                <!-- ═══ Knowledge View ═══ -->
+                <div class="view" id="view-knowledge">
+                    <div class="knowledge-stats" id="knowledge-stats">
+                        <!-- Knowledge stats populated by JS -->
+                    </div>
+
+                    <div class="knowledge-search">
+                        <input type="text" class="knowledge-search-input" id="knowledge-search-input"
+                            placeholder="Search knowledge base (e.g., bearing failure, hydraulic maintenance)..."
+                            onkeydown="if(event.key==='Enter')searchKnowledge()">
+                        <button class="knowledge-search-btn" onclick="searchKnowledge()">Search</button>
+                    </div>
+
+                    <div class="knowledge-upload" id="knowledge-upload"
+                        onclick="document.getElementById('file-upload').click()">
+                        <div class="knowledge-upload-icon">📄</div>
+                        <div class="knowledge-upload-text">Click to upload a document to the knowledge base</div>
+                        <div class="knowledge-upload-hint">Supports .txt, .md, .log, .csv files</div>
+                        <input type="file" id="file-upload" accept=".txt,.md,.log,.csv" style="display:none"
+                            onchange="uploadDocument(this)">
+                    </div>
+
+                    <div class="knowledge-results" id="knowledge-results">
+                        <!-- Search results populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Ambient particle canvas -->
+    <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+    <!-- Scripts -->
+    <script src="/js/utils.js?v=18"></script>
+    <script src="/js/websocket.js?v=18"></script>
+    <script src="/js/dashboard.js?v=23"></script>
+    <script src="/js/chat.js?v=19"></script>
+    <script src="/js/alerts.js?v=18"></script>
+    <script src="/js/knowledge.js?v=18"></script>
+    <script src="/js/logbook.js?v=18"></script>
+    <script src="/js/analytics.js?v=19"></script>
+    <script src="/js/app.js?v=18"></script>
+    <script src="/js/particles.js?v=18"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+CONTINUOUS CASTING MACHINE #1 — EQUIPMENT MANUAL
+=================================================
+Model: 6-Strand Billet Caster with EM Stirring
+Manufacturer: Primetals Technologies
+Installation Date: January 2017
+Location: Casting Zone, Steel Plant
+
+1. EQUIPMENT OVERVIEW
+---------------------
+The Continuous Casting Machine (CCM-001) is a 6-strand billet caster producing 150x150 mm billets at a maximum casting speed of 2.5 m/min per strand. Equipped with electromagnetic stirring (EMS) for improved internal quality. Annual capacity: 1.5 million tonnes.
+
+2. OPERATING PARAMETERS
+-----------------------
+- Tundish temperature: 1530-1560°C
+- Casting speed: 1.8-2.5 m/min (grade dependent)
+- Mould oscillation: 120-200 cycles/min
+- Mould level control: ±2 mm from setpoint
+- Secondary cooling: Air-mist system, 6 zones per strand
+- Billet straightening: 5-point progressive straightening
+- Specific water flow: 0.5-0.8 L/kg steel
+
+3. CRITICAL COMPONENTS AND FAILURE MODES
+-----------------------------------------
+
+3.1 Copper Mould Assembly
+- Function: Primary solidification of steel, forms initial shell
+- Common failures: Copper plate cracking, wear groove formation, coating failure
+- Warning signs: Mould level instability, increased thermocouple temperature variation, surface quality deterioration
+- Copper plate life: 40,000-60,000 tonnes (narrow face), 80,000-100,000 tonnes (wide face)
+- Recommended: Track mould thermal map, inspect during every campaign change
+
+3.2 Mould Oscillation System
+- Function: Prevents sticking of solidifying shell to mould
+- Common failures: Hydraulic cylinder failure, spring breakage, guide bearing wear
+- Warning signs: Oscillation frequency deviation, negative strip time variation, sticker alarm frequency increase
+- Recommended: Weekly oscillation parameter check, monthly mechanism inspection
+
+3.3 Segment Roller Bearings
+- Function: Support and guide the billet through the machine
+- Common failures: Bearing seizure, race spalling, seal failure leading to water ingress
+- Warning signs: Vibration increase, temperature rise, abnormal noise, bearing rotation stiffness
+- Bearing life: 12-18 months typical (varies with cooling water quality)
+- Critical: Water ingress is the #1 cause of premature bearing failure
+
+3.4 Submerged Entry Nozzle (SEN) / Tundish Nozzle
+- Function: Controls steel flow from tundish to mould
+- Common failures: Clogging (alumina buildup), erosion, cracking
+- Warning signs: Mould level hunting, inconsistent flow, strand speed deviation
+- Nozzle life: 6-10 heats depending on steel grade
+- Recommended: Argon injection rate optimization to prevent clogging
+
+3.5 Secondary Cooling System
+- Function: Controlled solidification rate below the mould
+- Common failures: Nozzle blockage, header valve failure, zone temperature deviation
+- Warning signs: Surface cracking on billets, bulging, internal quality defects
+- Recommended: Weekly nozzle spray pattern inspection, monthly flow calibration
+
+3.6 Electromagnetic Stirrer (EMS)
+- Function: Improves internal quality by stirring liquid steel
+- Common failures: Coil insulation breakdown, power supply failure, cooling water leak
+- Warning signs: Deteriorated internal quality (macro etch), power reading deviation
+- Recommended: Monthly insulation resistance measurement, quarterly coil inspection
+
+4. VIBRATION ANALYSIS — SEGMENT ROLLERS
+-----------------------------------------
+- Normal: 0.2-1.5 mm/s RMS
+- Warning: 3.5 mm/s RMS
+- Critical: 4.5 mm/s RMS (schedule bearing replacement)
+- Alarm: 6.0 mm/s RMS (stop strand for immediate replacement)
+
+Bearing failure progression:
+Stage 1 (Weeks before failure): Slight increase in ultrasonic readings
+Stage 2 (Days before failure): Vibration increase visible in velocity spectrum
+Stage 3 (Hours before failure): Temperature rise, audible noise
+Stage 4 (Imminent): Rapid vibration spike, seizure risk
+
+5. MOULD LEVEL CONTROL
+-----------------------
+Stable mould level is critical for quality. Deviations indicate:
+- ±1mm: Normal operating variation
+- ±2mm: Investigate SEN condition, flow control
+- ±3mm: WARNING — potential sticking risk, check immediately
+- ±5mm: CRITICAL — risk of breakout, reduce casting speed or stop strand
+
+6. MAINTENANCE SCHEDULE
+-----------------------
+Every heat: SEN/nozzle change (if required), tundish inspection
+Daily: Mould oscillation check, secondary cooling visual inspection
+Weekly: Segment roller rotation check, spray nozzle testing
+Monthly: Bearing vibration survey, mould thermocouple calibration
+Quarterly: Mould copper plate measurement, EMS inspection
+Semi-annual: Segment alignment survey, roller replacement campaign
+Annual: Complete machine overhaul (per strand, rotating schedule)
+
+7. COMMON FAILURE SCENARIOS AND ROOT CAUSES
+---------------------------------------------
+
+Scenario: Strand Breakout
+Root causes: 
+- Mould level control failure
+- SEN clogging causing uneven flow
+- Mould lubrication failure
+- Copper plate crack allowing water contact
+Prevention: Maintain sticker detection system, regular mould inspection
+
+Scenario: Bearing Seizure on Segment Roller
+Root causes:
+- Water ingress through damaged seals
+- Inadequate lubrication (blocked grease line)  
+- Excessive thermal load from improper secondary cooling
+- Extended operation beyond bearing life
+Prevention: Regular vibration monitoring, seal inspection, grease system maintenance
+
+Scenario: Internal Cracks in Billet
+Root causes:
+- Excessive casting speed for the grade
+- Improper secondary cooling intensity
+- EMS malfunction causing insufficient stirring
+- High superheat temperature
+Prevention: Optimize cooling curves per grade, maintain EMS, control tundish temperature
+
+8. SPARE PARTS — CRITICAL INVENTORY
+------------------------------------
+- Copper mould plates (narrow face): 4 sets
+- Copper mould plates (wide face): 2 sets
+- Segment roller bearings: 20 per strand type
+- SEN nozzles: 50 minimum (consumable)
+- Mould oscillation hydraulic cylinder: 2 spare
+- EMS coils: 1 spare set
+- Secondary cooling nozzles: 15% of installed quantity
+- Tundish stopper rods: 30 minimum

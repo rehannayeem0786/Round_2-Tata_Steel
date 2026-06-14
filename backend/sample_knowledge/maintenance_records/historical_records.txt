@@ -1,0 +1,144 @@
+HISTORICAL MAINTENANCE RECORDS — STEEL PLANT
+=============================================
+Period: January 2024 — May 2026
+Generated from: CMMS (Computerized Maintenance Management System)
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2024-001
+Equipment: Blast Furnace #1 (BF-001)
+Date: 2024-03-15
+Type: Corrective Maintenance
+Issue: Tuyere #7 burn-through
+Description: Tuyere #7 experienced complete burn-through due to cooling water blockage. Hot metal splash observed from tuyere area. Emergency plug installed.
+Root Cause: Calcium carbonate scale buildup in tuyere cooling channel, blocking water flow. Water treatment program was inadequate.
+Actions Taken: Replaced tuyere nose assembly, cleared cooling channel, replaced water supply hose. Installed water quality monitoring sensor on tuyere cooling circuit.
+Downtime: 6 hours (tuyere replacement during scheduled inter-cast period)
+Parts Used: 1x tuyere nose (copper), 1x water hose assembly, gasket set
+Lesson Learned: Implement weekly water quality check specifically for tuyere cooling circuits. Added to preventive maintenance checklist.
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2024-002
+Equipment: Continuous Caster #1 (CCM-001)
+Date: 2024-06-22
+Type: Corrective Maintenance (Emergency)
+Issue: Strand 2 breakout
+Description: Liquid steel breakout occurred at strand 2, 1.5m below mould. Caused by shell sticking in mould due to lubrication failure. Casting stopped on all strands as safety precaution.
+Root Cause: Mould oscillation oil pump failure caused loss of lubrication. Sticker detection system alarmed 3 seconds before breakout but automatic speed reduction was too slow.
+Actions Taken: Cleaned breakout area (12 hours). Replaced oscillation oil pump. Installed redundant backup pump. Updated sticker detection response time from 3s to 1s automatic speed reduction. Replaced damaged mould copper plates.
+Downtime: 36 hours total (cleaning + repair + restart)
+Parts Used: 1x oil pump, 2x mould copper plates, strand guide rollers (6x damaged)
+Lesson Learned: Installed redundant oscillation pump with automatic switchover. Reduced sticker detection response time. Added oscillation pump pressure to critical alarm list.
+Cost Impact: Estimated loss of 2,500 tonnes production + repair costs ~$150,000
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2024-003
+Equipment: Hot Rolling Mill (HRM-001)
+Date: 2024-09-10
+Type: Predictive Maintenance
+Issue: F3 stand work roll bearing degradation
+Description: Vibration analysis detected early-stage outer race defect (BPFO) on F3 stand upper work roll bearing. Trending analysis showed steady increase over 3 weeks.
+Root Cause: Normal fatigue wear. Bearing had completed 14 months of service (expected life: 12-18 months).
+Actions Taken: Scheduled bearing replacement during next planned roll change. Replacement completed without unplanned downtime. Removed bearing confirmed outer race spalling.
+Downtime: 0 hours (performed during scheduled roll change)
+Parts Used: 2x work roll bearings
+Lesson Learned: Vibration-based predictive maintenance successfully prevented unplanned failure. Added automated trending alarm to vibration monitoring system.
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2024-004
+Equipment: Cooling Tower #3 (CT-001)
+Date: 2024-11-05
+Type: Preventive Maintenance
+Issue: Annual cooling tower overhaul
+Description: Complete annual inspection including basin drain and clean, fill media inspection, fan motor service, and water treatment system review.
+Findings: Fill media showing 10% degradation (increased from 5% last year). Fan motor bearings showing early wear (vibration at 3.2 mm/s, up from 2.1 mm/s). Basin concrete needs patching in 2 areas.
+Actions Taken: Cleaned basin, repaired concrete, replaced fan motor bearings, adjusted chemical treatment program. Recommended fill media replacement within 18 months.
+Downtime: 3 days (during mild weather when cooling demand was reduced)
+Parts Used: Fan motor bearings (2x), concrete repair material, chemical treatment supplies
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2025-001
+Equipment: Hydraulic Press (HP-001)
+Date: 2025-02-18
+Type: Corrective Maintenance
+Issue: Main cylinder drift / cannot hold position
+Description: Press unable to maintain position under load. Gradual drift of approximately 2mm/minute observed. Oil temperature elevated (62°C).
+Root Cause: Piston seal failure on main cylinder. Age-related degradation of polyurethane seals. Internal leakage generating excess heat.
+Actions Taken: Replaced complete seal kit on main cylinder. Flushed hydraulic system. Replaced oil filters. Performed oil analysis — oil condition acceptable, no change needed.
+Downtime: 14 hours
+Parts Used: Cylinder seal kit (complete), oil filters (4x)
+Lesson Learned: Added cylinder drift monitoring to automated system. Set alarm for drift >0.5mm/min. Updated seal replacement interval from 36 months to 24 months.
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2025-002
+Equipment: Overhead Crane 150T (CR-001)
+Date: 2025-05-12
+Type: Regulatory Inspection + Preventive Maintenance
+Issue: Annual statutory inspection
+Description: Annual crane inspection as required by regulations. Load test performed at 125% rated capacity (187.5 tonnes).
+Findings: Wire rope showing 5% wire breakage on drum section (within limits but trending). Brake linings at 55% remaining. Limit switches functional. Electrical insulation satisfactory.
+Actions Taken: Passed load test. Scheduled wire rope replacement for next 12-month period. Adjusted brake clearance. Lubricated all wire rope sheaves.
+Downtime: 8 hours (scheduled during plant annual maintenance shutdown)
+Parts Used: Brake adjustment shims, sheave bearings (2x)
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2025-003
+Equipment: Continuous Caster #1 (CCM-001)
+Date: 2025-08-30
+Type: Corrective Maintenance
+Issue: EMS (Electromagnetic Stirrer) failure on strand 5
+Description: Electromagnetic stirrer on strand 5 stopped functioning. Internal quality of billets deteriorated (center porosity and segregation observed in macro etch samples).
+Root Cause: Insulation breakdown on EMS coil due to cooling water leak. Water entered the coil winding through a cracked cooling tube connection.
+Actions Taken: Replaced EMS coil assembly. Repaired cooling tube connection with improved sealing. Performed insulation resistance test on all other strand EMS units (all satisfactory).
+Downtime: 12 hours (strand 5 only, other strands continued casting)
+Parts Used: 1x EMS coil assembly, cooling tube fittings, insulation material
+Lesson Learned: Added monthly insulation resistance measurement to preventive schedule. Installed moisture sensors near EMS cooling connections.
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2025-004
+Equipment: BOF Converter #1 (BOF-001)
+Date: 2025-11-20
+Type: Major Overhaul
+Issue: Vessel relining
+Description: Refractory lining reached end of life after 3,200 heats. Complete relining of vessel with magnesia-carbon bricks.
+Findings: Average lining thickness reduced to 35% of original. Severe wear at trunnion zone and tap hole area. Shell temperature monitoring showed hot spots exceeding 350°C.
+Actions Taken: Complete relining with upgraded MgO-C brick quality. Installed additional shell thermocouples (increased from 24 to 36 points). Upgraded tap hole design for improved life.
+Downtime: 12 days
+Parts Used: 800 tonnes MgO-C bricks, mortar, steel components for tap hole
+Cost: ~$1.2 million (bricks + labor + lost production)
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2026-001
+Equipment: Blast Furnace #1 (BF-001)
+Date: 2026-01-10
+Type: Corrective Maintenance (Emergency)
+Issue: Burden distribution chute actuator failure
+Description: Chute actuator motor seized, causing the distribution chute to lock in one position. This resulted in uneven burden distribution and gas channeling in the furnace.
+Symptoms observed: Uneven top gas temperature (variation >50°C between probes), increased pressure fluctuations, abnormal gas flow pattern.
+Root Cause: Actuator motor bearing failure due to high-temperature exposure. Motor cooling fan had partially blocked air intake.
+Actions Taken: Replaced actuator motor and position sensor. Cleaned motor cooling fan inlet. Installed temperature sensor on motor housing. Calibrated chute angles. Added motor temperature to alarm system.
+Downtime: 8 hours (reduced blast volume during repair)
+Parts Used: Chute actuator motor, position sensor, cooling fan filter
+Lesson Learned: Add motor temperature monitoring for all furnace top equipment. Include motor cooling system in routine inspection.
+
+═══════════════════════════════════════════════════════════════
+
+RECORD #MR-2026-002
+Equipment: Continuous Caster #1 (CCM-001)
+Date: 2026-03-15
+Type: Corrective Maintenance
+Issue: Segment roller bearing failure on strand 3
+Description: Bearing on segment roller #23 in strand 3 showed advanced vibration increase (4.2 mm/s). Scheduled replacement during next sequence change.
+Root Cause: Inadequate lubrication — grease supply line to roller #23 was partially blocked by hardened old grease.
+Actions Taken: Replaced both bearings on roller #23. Flushed and cleaned all grease lines in segment. Installed grease flow sensors on critical rollers. Updated lubrication schedule to include grease line flushing quarterly.
+Downtime: 5 hours (during sequence change, no production impact)
+Parts Used: 2x SKF 23128 bearings, grease line fittings, grease flow sensors (3x)
+Lesson Learned: Grease line blockage is a recurring issue. Quarterly flushing now mandatory. Consider upgrading to centralized automated lubrication system.

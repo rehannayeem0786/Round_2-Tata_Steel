@@ -1,0 +1,140 @@
+STANDARD OPERATING PROCEDURE: COOLING SYSTEM MAINTENANCE
+==========================================================
+Document ID: SOP-UTIL-003
+Revision: 2.1
+Effective Date: February 2026
+Department: Utilities Maintenance
+
+1. PURPOSE
+----------
+This SOP covers maintenance procedures for industrial cooling systems including cooling towers, heat exchangers, and closed-loop cooling circuits serving the steel plant.
+
+2. SCOPE
+--------
+Applies to:
+- Cooling Tower #3 (CT-001) — Casting and Rolling area
+- Mould cooling circuits (CCM-001)
+- Rolling mill roll cooling systems (HRM-001, CRM-001)
+- Furnace cooling water circuits (BF-001, BOF-001, LF-001)
+
+3. COOLING TOWER MAINTENANCE
+------------------------------
+
+3.1 Daily Checks
+- Basin water level
+- Make-up water flow rate
+- Fan operation (noise, vibration)
+- Blow-down rate and conductivity
+- Approach temperature (outlet - ambient wet bulb)
+- Visual drift eliminator condition
+
+3.2 Weekly Checks
+- Chemical treatment levels (pH, conductivity, biocide residual)
+- Fill media condition (visual from access door)
+- Distribution nozzle spray pattern
+- Basin sediment level
+- Fan belt tension (if belt-driven)
+
+3.3 Monthly Checks
+- Fan motor bearing temperature and vibration
+- Gearbox oil level and condition
+- Fill media sections for fouling or algae growth
+- Structure integrity (corrosion, fastener condition)
+- Drift eliminator condition
+
+3.4 Quarterly Checks
+- Full water chemistry analysis
+- Fan blade inspection (pitch, balance, cracks)
+- Motor current and power factor measurement
+- Heat rejection capacity test
+
+3.5 Annual Checks
+- Complete basin drain, clean, and inspect
+- Fill media detailed inspection (consider replacement if >15% degradation)
+- Fan motor overhaul
+- Gearbox oil change
+- Structural inspection (concrete, steel, FRP)
+- Legionella risk assessment
+
+4. WATER TREATMENT
+-------------------
+Parameter                    | Target Range
+-----------------------------|-------------------
+pH                           | 7.0 - 8.5
+Conductivity                 | < 2500 µS/cm
+Total hardness               | < 500 ppm as CaCO3
+Chloride                     | < 250 ppm
+Free chlorine (biocide)      | 0.5 - 1.0 ppm
+Cycles of concentration      | 3 - 5
+Langelier Saturation Index   | -0.5 to +0.5
+
+Chemical treatment program:
+- Scale inhibitor: Phosphonate-based, continuous dosing
+- Corrosion inhibitor: Molybdate + phosphate blend
+- Biocide: Alternating oxidizing (chlorine) and non-oxidizing (isothiazolone)
+- Dispersant: Polymer-based, prevents fouling
+
+5. CLOSED-LOOP COOLING CIRCUITS
+----------------------------------
+
+Mould cooling (CCM-001):
+- Water quality: Demineralized, conductivity < 20 µS/cm
+- Flow rate: As per strand requirement (critical for shell formation)
+- Temperature rise: Max 8°C across mould
+- Pressure: 6-10 bar at mould inlet
+- CRITICAL: Any flow reduction triggers automatic casting speed reduction
+
+Roll cooling (HRM-001):
+- Water quality: Filtered to 50 micron minimum
+- Flow rate: 200-400 L/min per stand
+- Temperature: 25-35°C supply
+- Additives: Corrosion inhibitor as required
+- Check nozzle spray pattern weekly
+
+6. TROUBLESHOOTING
+-------------------
+
+Problem: Cooling tower approach temperature increasing
+→ Check fill media for fouling or degradation
+→ Verify fan speed and blade pitch
+→ Check water distribution (nozzle blockage)
+→ Review blow-down rate and cycles of concentration
+→ Check for air recirculation (wind direction effects)
+
+Problem: High conductivity in cooling water
+→ Increase blow-down rate
+→ Check make-up water quality
+→ Review chemical dosing rates
+→ Check for process water contamination
+
+Problem: Mould cooling flow low
+→ Check pump performance
+→ Inspect strainer and filters
+→ Check for scale buildup in mould channels
+→ Verify control valve position
+→ URGENT: Reduce casting speed if flow cannot be restored
+
+Problem: Fan motor high vibration
+→ Check fan blade balance and pitch
+→ Inspect motor bearings
+→ Check gearbox alignment
+→ Verify mounting bolt tightness
+→ Check for ice formation in cold weather
+
+7. FILL MEDIA REPLACEMENT CRITERIA
+-------------------------------------
+Replace fill media when:
+- More than 15% of fill area shows collapse or deformation
+- Approach temperature increases by more than 3°C from design
+- Biological fouling cannot be controlled by chemical treatment
+- Physical damage from ice or debris
+- Age exceeds manufacturer's recommended life (typically 10-15 years)
+
+8. ESTIMATED DURATION AND RESOURCES
+--------------------------------------
+- Daily/weekly checks: 1-2 hours
+- Monthly inspection: 4 hours
+- Annual basin clean: 2-3 days
+- Fill media replacement: 5-7 days
+- Fan motor replacement: 8-12 hours
+- Personnel: 2 maintenance technicians for routine, 4-6 for major work

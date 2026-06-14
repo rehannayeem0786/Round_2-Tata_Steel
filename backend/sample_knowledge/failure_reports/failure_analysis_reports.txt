@@ -1,0 +1,197 @@
+FAILURE ANALYSIS REPORTS — STEEL PLANT EQUIPMENT
+==================================================
+Department: Reliability Engineering
+Period: 2024 — 2026
+
+═══════════════════════════════════════════════════════════════
+
+FAILURE ANALYSIS REPORT: FA-2024-007
+Equipment: Continuous Caster #1 (CCM-001), Strand 2
+Component: Mould copper plate (narrow face)
+Failure Date: 2024-06-22
+Analysis Date: 2024-07-05
+
+FAILURE DESCRIPTION:
+Shell sticking led to breakout on strand 2 at approximately 1.5 meters below the mould exit. Liquid steel escaped through a tear in the solidified shell.
+
+EXAMINATION FINDINGS:
+1. Mould copper plate showed deep wear grooves (>2mm) at meniscus level
+2. Surface coating (Cr+Ni) was completely worn through in the lower 200mm
+3. Mould oscillation marks on removed shell piece showed irregular spacing — indicating oscillation irregularity
+4. Oil pump for mould oscillation showed internal gear wear — flow rate reduced to 60% of specification
+
+ROOT CAUSE ANALYSIS:
+Primary: Mould oscillation pump degradation led to inconsistent lubrication at the mould-shell interface
+Contributing: Copper plate wear had reduced mould thermal extraction efficiency
+Contributing: Sticker detection response time (3 seconds) was too slow to prevent breakout
+
+FAILURE MODE CLASSIFICATION:
+- Lubrication failure (primary)
+- Wear-out (contributing)
+- Protection system inadequacy (contributing)
+
+RECOMMENDATIONS:
+1. Install redundant oscillation pump with automatic switchover — COMPLETED
+2. Reduce sticker detection response time to 1 second — COMPLETED
+3. Establish maximum copper plate wear limit and track remaining life — COMPLETED
+4. Add oscillation pump flow rate to continuous monitoring — COMPLETED
+5. Consider upgrading to hydraulic oscillation (eliminating mechanical pump) — UNDER EVALUATION
+
+ESTIMATED COST OF FAILURE: $280,000 (lost production + repair + new parts)
+RECURRENCE PROBABILITY (if actions not taken): HIGH (within 12 months)
+RECURRENCE PROBABILITY (after actions): LOW
+
+═══════════════════════════════════════════════════════════════
+
+FAILURE ANALYSIS REPORT: FA-2024-012
+Equipment: Blast Furnace #1 (BF-001)
+Component: Tuyere #7 — Cooling water circuit
+Failure Date: 2024-03-15
+Analysis Date: 2024-03-25
+
+FAILURE DESCRIPTION:
+Tuyere #7 experienced complete burn-through. Cooling water immediately vaporized on contact with hot metal, creating steam explosion risk. Emergency plug installed within 10 minutes.
+
+EXAMINATION FINDINGS:
+1. Tuyere nose showed complete melting in lower quadrant
+2. Cooling water channel was 70% blocked with calcium carbonate scale
+3. Water flow to tuyere #7 had been declining over 6 weeks (from 120 L/min to 45 L/min)
+4. Other tuyeres in same cooling circuit showed 20-40% scale buildup
+
+ROOT CAUSE ANALYSIS:
+Primary: Calcium carbonate scale accumulation in tuyere cooling channels due to hard water
+Contributing: Water treatment chemical dosing pump had been running at reduced capacity
+Contributing: No individual tuyere flow monitoring installed — only circuit total flow monitored
+
+FAILURE MODE CLASSIFICATION:
+- Fouling/contamination (primary)
+- Maintenance deficiency (contributing)
+- Monitoring gap (contributing)
+
+RECOMMENDATIONS:
+1. Install individual flow meters on each tuyere cooling line — COMPLETED
+2. Upgrade water treatment to include online hardness monitoring — COMPLETED
+3. Implement weekly water quality spot-checks at tuyere level — COMPLETED
+4. Set alarm for individual tuyere flow drop >20% from baseline — COMPLETED
+5. Schedule annual chemical cleaning of all tuyere cooling circuits — IN PROGRESS
+
+ESTIMATED COST OF FAILURE: $85,000 (parts + downtime + emergency response)
+RECURRENCE PROBABILITY (after actions): VERY LOW
+
+═══════════════════════════════════════════════════════════════
+
+FAILURE ANALYSIS REPORT: FA-2025-003
+Equipment: Hot Rolling Mill (HRM-001)
+Component: F3 Finishing Stand — Work roll bearing
+Failure Date: 2025-03-20 (predicted), prevented via PdM
+Analysis Date: 2025-03-25
+
+FAILURE DESCRIPTION:
+Predictive maintenance (vibration monitoring) detected early-stage outer race defect on F3 stand upper work roll bearing. Bearing was proactively replaced during planned roll change, preventing unplanned failure.
+
+EXAMINATION FINDINGS:
+1. Outer race showed fatigue spalling — typical pattern for bearing approaching end-of-life
+2. Spalling area: approximately 8mm x 3mm on load zone
+3. Inner race condition: satisfactory, minor polishing
+4. Rolling elements: 2 out of 24 rollers showed surface distress
+5. Lubricant condition: adequate, no contamination detected
+6. Bearing had been in service for 14 months (expected life: 12-18 months)
+
+ROOT CAUSE ANALYSIS:
+Primary: Normal fatigue wear — bearing reached design life under operating loads
+Contributing: None — this was a normal wear-out failure mode
+
+FAILURE MODE CLASSIFICATION:
+- Fatigue (normal end-of-life)
+
+RECOMMENDATIONS:
+1. Maintain vibration-based monitoring program — ONGOING
+2. Set automated trending alarm at BPFO amplitude increase of 6dB — COMPLETED
+3. Consider upgrading to hybrid ceramic bearings for extended life — UNDER EVALUATION
+4. Document bearing life data for improved replacement forecasting — COMPLETED
+
+KEY LEARNING: Predictive maintenance program successfully detected bearing defect 4-6 weeks before catastrophic failure would have occurred. Estimated savings: $350,000 in avoided unplanned downtime and consequential damage.
+
+═══════════════════════════════════════════════════════════════
+
+FAILURE ANALYSIS REPORT: FA-2025-008
+Equipment: Hydraulic Press 2000T (HP-001)
+Component: Main cylinder piston seal
+Failure Date: 2025-02-18
+Analysis Date: 2025-03-01
+
+FAILURE DESCRIPTION:
+Press unable to maintain forging position. Cylinder drift of 2mm/min under load. Oil temperature elevated to 62°C (normal: 40-50°C).
+
+EXAMINATION FINDINGS:
+1. Piston U-cup seal showed extensive extrusion and wear
+2. Backup ring was fragmented — no longer providing anti-extrusion support
+3. Cylinder bore showed minor scoring (within tolerable limits after honing)
+4. Piston rod surface: satisfactory, chrome intact
+5. Seal material: polyurethane, 28 months in service (expected life: 24-36 months)
+
+ROOT CAUSE ANALYSIS:
+Primary: Normal wear-out of polyurethane piston seal
+Contributing: Backup ring material selection — PTFE backup ring became brittle over time, reducing anti-extrusion support and accelerating U-cup wear
+
+FAILURE MODE CLASSIFICATION:
+- Wear-out (primary)
+- Material degradation (contributing)
+
+RECOMMENDATIONS:
+1. Reduce seal replacement interval from 36 months to 24 months — COMPLETED
+2. Upgrade backup ring material from PTFE to glass-filled PTFE — COMPLETED
+3. Implement cylinder drift monitoring with automated alarm — COMPLETED
+4. Add oil temperature trending to predictive maintenance program — COMPLETED
+
+ESTIMATED COST OF FAILURE: $45,000 (seal replacement + downtime + production loss)
+
+═══════════════════════════════════════════════════════════════
+
+FAILURE ANALYSIS REPORT: FA-2025-015
+Equipment: Continuous Caster #1 (CCM-001), Strand 5
+Component: Electromagnetic Stirrer (EMS) coil
+Failure Date: 2025-08-30
+Analysis Date: 2025-09-15
+
+FAILURE DESCRIPTION:
+EMS on strand 5 ceased functioning. Detected via product quality deterioration — macro etch samples showed increased center porosity and carbon segregation.
+
+EXAMINATION FINDINGS:
+1. EMS coil insulation resistance measured at 0.2 MΩ (specification: >100 MΩ)
+2. Water ingress found inside coil housing
+3. Cooling tube fitting at coil inlet had developed a hairline crack
+4. Estimated water exposure duration: 2-3 weeks (based on insulation degradation rate)
+5. Other strand EMS units tested — all satisfactory (>500 MΩ)
+
+ROOT CAUSE ANALYSIS:
+Primary: Cooling water leak through cracked tube fitting caused insulation breakdown
+Contributing: Fitting material (brass) susceptible to stress corrosion cracking in industrial atmosphere
+Contributing: No moisture detection system in EMS housing
+
+FAILURE MODE CLASSIFICATION:
+- Electrical insulation breakdown (primary)
+- Corrosion-induced leak (contributing)
+- Monitoring gap (contributing)
+
+RECOMMENDATIONS:
+1. Replace brass fittings with stainless steel on all EMS cooling connections — IN PROGRESS
+2. Install moisture sensors in all EMS housings — COMPLETED
+3. Add monthly insulation resistance measurement to PM schedule — COMPLETED
+4. Maintain 1 spare EMS coil assembly in inventory — COMPLETED
+
+ESTIMATED COST OF FAILURE: $120,000 (coil replacement + quality downgrade of affected billets)
+
+═══════════════════════════════════════════════════════════════
+
+SUMMARY OF KEY FAILURE PATTERNS AND INSIGHTS:
+
+1. LUBRICATION FAILURES are the leading cause of bearing and mechanical failures (35% of all failures). Key prevention: automated lubrication systems, grease line monitoring, oil analysis programs.
+
+2. WATER/COOLING SYSTEM ISSUES account for 25% of failures. Scale buildup, water quality, and leak detection are critical maintenance areas.
+
+3. SEAL AND GASKET WEAR follows predictable patterns — implementing time-based replacement before end-of-life prevents 90% of seal-related failures.
+
+4. PREDICTIVE MAINTENANCE (vibration, oil analysis, thermography) has proven effective in preventing 80% of potential catastrophic failures when properly implemented.
+
+5. MONITORING GAPS are a common contributing factor — installing redundant sensors and automated trending alarms significantly reduces risk.

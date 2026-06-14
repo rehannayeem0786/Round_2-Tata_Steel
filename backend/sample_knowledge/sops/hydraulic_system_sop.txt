@@ -1,0 +1,131 @@
+STANDARD OPERATING PROCEDURE: HYDRAULIC SYSTEM MAINTENANCE
+============================================================
+Document ID: SOP-HYD-002
+Revision: 2.0
+Effective Date: March 2026
+Department: Hydraulic & Pneumatic Maintenance
+
+1. PURPOSE
+----------
+This SOP establishes procedures for routine maintenance, troubleshooting, and repair of hydraulic systems used in rolling mills, presses, and continuous casting machines.
+
+2. SCOPE
+--------
+Applies to all hydraulic systems including:
+- Rolling mill AGC (Automatic Gauge Control) hydraulics (HRM-001, CRM-001)
+- Hydraulic press main cylinders (HP-001)
+- Caster mould oscillation hydraulics (CCM-001)
+- Ladle furnace electrode positioning (LF-001)
+
+3. SAFETY REQUIREMENTS
+-----------------------
+- Hydraulic systems operate at pressures up to 315 bar — LETHAL INJECTION HAZARD
+- NEVER use hands to check for leaks — use cardboard or paper
+- Depressurize system completely before opening any connection
+- Use rated safety blocks when working under raised hydraulic components
+- Wear safety glasses and face shield when working with pressurized fittings
+
+4. ROUTINE MAINTENANCE SCHEDULE
+---------------------------------
+
+Daily checks:
+- Oil level in reservoir (maintain between min/max marks)
+- System pressure gauge reading (compare with setpoint)
+- Visual inspection for leaks at fittings, hoses, cylinders
+- Check oil temperature (normal: 40-55°C)
+- Listen for pump cavitation noise
+
+Weekly checks:
+- Check filter differential pressure indicators
+- Inspect accumulator pre-charge pressure (nitrogen)
+- Verify all safety valve settings
+- Check hose condition for bulging, cracking, or abrasion
+
+Monthly checks:
+- Oil sample for laboratory analysis
+- Filter element replacement (if differential pressure indicator triggered)
+- Cylinder rod inspection (scoring, pitting, chrome flaking)
+- Check all bolted connections for tightness
+- Test emergency stop and safety interlocks
+
+Quarterly checks:
+- Servo valve testing (frequency response, null bias)
+- Pump performance test (flow rate vs pressure)
+- Accumulator bladder/diaphragm inspection
+- Complete hose inventory and condition assessment
+
+5. OIL ANALYSIS PARAMETERS
+----------------------------
+Parameter                    | Action Level
+-----------------------------|-------------------
+Particle count (ISO 4406)    | > 18/16/13 — change filters
+Water content                | > 0.1% — investigate source
+Viscosity change             | > ±10% — investigate
+Acid number increase         | > 0.5 mg KOH/g — consider oil change
+Iron particles               | > 50 ppm — check pump/valve wear
+Copper particles             | > 20 ppm — check bearings/bushings
+
+6. TROUBLESHOOTING GUIDE
+--------------------------
+
+Problem: System pressure low
+→ Check pump output (flow test)
+→ Inspect relief valve setting
+→ Check for internal leaks in cylinders (bypass test)
+→ Verify oil level and suction strainer
+
+Problem: Oil temperature high (>65°C)
+→ Check oil cooler (water flow, fouling)
+→ Verify reservoir oil level
+→ Check for internal leaks causing heat generation
+→ Reduce system duty cycle if possible
+→ Inspect pump for wear (increased leakage generates heat)
+
+Problem: Jerky cylinder movement
+→ Check for air in system (bleed at highest point)
+→ Inspect servo/proportional valve for contamination
+→ Check cylinder seals for damage
+→ Verify hydraulic fluid viscosity
+
+Problem: Pump noise (cavitation)
+→ Check suction line for air leaks
+→ Verify oil viscosity (cold oil too thick)
+→ Clean or replace suction strainer
+→ Check oil level (suction line must be submerged)
+
+Problem: Cylinder drift (cannot hold position)
+→ Check piston seals
+→ Inspect pilot-operated check valves
+→ Test counterbalance valves
+→ Check for servo valve leakage past null
+
+7. HYDRAULIC CYLINDER SEAL REPLACEMENT
+-----------------------------------------
+Step 1: Depressurize system completely
+Step 2: Disconnect hydraulic lines (cap open ports to prevent contamination)
+Step 3: Remove cylinder from machine (note orientation and position)
+Step 4: Disassemble cylinder (remove gland, extract piston)
+Step 5: Inspect bore for scoring (light honing if needed)
+Step 6: Inspect piston rod for damage (chrome repair if needed)
+Step 7: Install new seal kit (correct orientation for each seal)
+Step 8: Reassemble with clean oil on all seals
+Step 9: Reinstall and reconnect lines
+Step 10: Bleed air from cylinder and test at low pressure first
+
+8. HYDRAULIC OIL SPECIFICATION
+--------------------------------
+- Type: ISO VG 46 anti-wear hydraulic oil (HLP 46)
+- Operating temperature range: 15-65°C
+- Cleanliness target: ISO 16/14/11
+- Water content: <0.05% (target)
+- Reservoir capacity: varies by system (check system drawing)
+- Oil change interval: 4000 hours or annually, whichever comes first
+
+9. ESTIMATED DURATION AND RESOURCES
+--------------------------------------
+- Routine daily/weekly checks: 1-2 hours per system
+- Monthly inspection: 4 hours per system
+- Filter change: 1 hour
+- Oil change (complete): 4-8 hours depending on reservoir size
+- Cylinder seal replacement: 6-12 hours
+- Servo valve replacement: 2-4 hours
