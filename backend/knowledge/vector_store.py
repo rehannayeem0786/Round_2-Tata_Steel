@@ -15,6 +15,44 @@ except Exception:
 
 _client = None
 _collections = {}
+_embedding_function = None
+
+
+class LightweightEmbeddingFunction:
+    """
+    A low-memory embedding function based on scikit-learn's HashingVectorizer.
+
+    This avoids loading ChromaDB's default ONNX/transformer model (which needs
+    onnxruntime + a ~80MB model and pushes RAM usage past free-tier limits).
+    The hashing vectorizer is stateless, needs no model download, and produces
+    fixed-size L2-normalized vectors suitable for cosine similarity search.
+    """
+
+    def __init__(self, n_features: int = 384):
+        from sklearn.feature_extraction.text import HashingVectorizer
+        self._n_features = n_features
+        self._vectorizer = HashingVectorizer(
+            n_features=n_features,
+            alternate_sign=False,
+            norm="l2",
+            stop_words="english",
+        )
+
+    def __call__(self, input):
+        # ChromaDB passes a list of documents (strings) as `input`.
+        matrix = self._vectorizer.transform(input)
+        return matrix.toarray().astype(float).tolist()
+
+    def name(self) -> str:
+        return "lightweight-hashing"
+
+
+def get_embedding_function():
+    """Get or create the shared lightweight embedding function."""
+    global _embedding_function
+    if _embedding_function is None:
+        _embedding_function = LightweightEmbeddingFunction()
+    return _embedding_function
 
 
 def get_client():
@@ -34,7 +72,8 @@ def get_collection(name: str):
         client = get_client()
         _collections[name] = client.get_or_create_collection(
             name=name,
-            metadata={"hnsw:space": "cosine"}
+            metadata={"hnsw:space": "cosine"},
+            embedding_function=get_embedding_function(),
         )
     return _collections[name]
 
